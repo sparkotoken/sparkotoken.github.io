@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sparko</title>
+
+    <meta name="description" content="Sparko - Redefining the Future of Meme Coins!">
+    <meta name="keywords"
+        content="sparko, crypto currency, blockchain, digital finance, decentralized finance, fintech, finance, Shiba, Shiba Inu, turbo, pepe, token, meme, meme coin, gpt-4, chat gpt, ai, artificial intelligence, eth, ethereum netwrok, ethereum, minions, Minionseth">
+    <meta name="author" content="Sparko">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/img/logo.jpeg">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery/css/lightgallery-bundle.min.css" />
+
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #0b0f19;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+    <main class="page-wrapper">
+        <header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
+            <div class="container px-3">
+                <a href="index.html" class="navbar-brand pe-3">
+                    <img src="assets/img/logo.jpeg" width="47" alt="Sparko">
+                    Sparko
+                </a>
+                <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+                    <div class="offcanvas-header border-bottom border-light">
+                        <h5 class="offcanvas-title text-white">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link">Whitepaper</a>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div class="offcanvas-header border-top border-light">
+                    </div>
+                </div>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </header>
+
+        <section
+            class="dark-mode bg-dark bg-size-cover bg-repeat-0 bg-position-center position-relative overflow-hidden mb-5"
+            style="background-image: url(assets/img/bg.jpeg);">
+            <div class="position-absolute w-100 h-100 bg-dark opacity-50 py-5 mb-5"></div>
+            <div class="container py-5 position-relative" style="z-index: 99;">
+                <div class="row flex-lg-nowrap">
+                    <div class="col-lg-7 col-xl-6 col-xxl-5 text-center text-lg-start pt-5 mt-4">
+                        <h1 class="display-3 pb-2 pb-sm-3">Discover Sparko</h1>
+                        <p class="fs-lg d-md-none d-xl-block pb-2 pb-md-0 mb-4 mb-md-5">
+                            Redefining the Future of Meme Coins!
+                        </p>
+                        <div class="mt-n4 ms-lg-n4 ms-n3 pb-sm-3 pb-md-4">
+                            <a class="btn btn-lg btn-light mt-lg-4 mt-3 ms-lg-4 ms-3">
+                                Join us on Twitter
+                                <i class="bx bx-right-arrow-alt ms-1 lead"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mb-5 pt-md-2 pt-lg-4 pt-xl-5">
+            <h2 class="h1 text-center mx-auto mt-n2 mt-sm-0 pt-md-2" style="max-width: 530px;">
+                About me
+            </h2>
+
+            <div class="container pt-2">
+                <div class="row">
+                    <di class="col-lg-6 col-sm-12">
+                        <p class="m-0 fs-md mt-2 mt-sm-3 text-justify">
+                            As a seasoned software developer, my keen observation of the trust placed in Shiba Inu, the
+                            frenzy surrounding Pepe, and the tremendous community support garnered by the TURBO token
+                            has inspired me to take a leap of faith. With the hope of creating another remarkable meme
+                            coin, I venture into the world of cryptocurrency, hoping that Sparko will also capture the
+                            hearts of enthusiasts and prove to be a shining star in this space.
+                            <br /><br />
+                            Sparko operates on a reliable and secure <strong class="text-primary">Ethereum
+                                Network</strong> as
+                            an innovative cryptocurrency. I am at the forefront of shaping the future of meme coins,
+                            driven by inspiration from renowned entities like
+                            <strong class="text-primary">Shiba Inc, Turbo, Pepe, and the vast potential of artificial
+                                intelligence</strong>.
+                            <br /><br />
+                            At Sparko, I harness the power of AI to develop groundbreaking applications. Our focus lies
+                            in creating fun games in the metaverse space powered by AI, revolutionizing the gaming
+                            experience and offering immersive interactions.
+                            <br /><br />
+                            But that's not all. Making a positive impact is a core value of Sparko. I am committed to
+                            giving donations to organizations that support malnourished and abandoned children,
+                            leveraging the influence and success of Sparko for the greater good.
+                        </p>
+                    </di>
+                    <div class="col-6 d-sm-none d-lg-block">
+                        <div class="bg-dark bg-size-cover h-100 bg-repeat-0 bg-position-center position-relative overflow-hidden mb-5"
+                            style="background-image: url(assets/img/sparko/03.jpg);"></div>
+                    </div>
+                    <div class="col-12">
+                        <p class="m-0 fs-md mt-2 mt-sm-3 text-justify">
+                            Furthermore, Sparko is promising to bring Sparko payment usage in shopping, aiming to
+                            enhance everyday transactions and provide a seamless experience for users who wish to
+                            utilize Sparko as a convenient and secure payment option.
+                            <br /><br />
+                            Sparko's journey began as a daring experiment in the realm of cryptocurrency creation. With
+                            unwavering determination, I embarked on a mission to redefine the possibilities of digital
+                            assets. Throughout this transformative process, I will closely follow the guidance of
+                            influential figures such as <strong class="text-primary">GPT-4, Brad, and Bing.
+                            </strong>Meticulously documenting each step along the way.
+                            <br /><br />
+                            I extend a warm invitation to join us on this exhilarating adventure. Embrace the endless
+                            possibilities that lie ahead for Sparko Coin and its vibrant community. Together, We can
+                            shape the future of cryptocurrencies and embark on a journey filled with exciting
+                            opportunities.
+                            <br /> <br />
+                            Last but certainly not least, The Sparko Foundation has diligently crafted incentives to
+                            provide long-term rewarding benefits for dedicated HODL wallets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5 py-5 bg-secondary">
+            <div class="container my-xl-5 my-lg-4 pb-2 py-sm-3 py-md-4">
+                <div class="row my-2">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h2 class="h1 mb-4 pb-3">
+                            Tokenomics
+                        </h2>
+                        <ul class="mb-0">
+                            <li>
+                                <strong class="text-primary">0%</strong> taxes on buys and sells.
+                            </li>
+                            <li>
+                                <strong class="text-primary">85%</strong> public
+                            </li>
+                            <li>
+                                <strong class="text-primary">10%</strong> for Sparko Foundation
+                            </li>
+                            <li>
+                                <strong class="text-primary">5%</strong> for the Sparko founder.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <h2 class="h1 mb-4 pb-3">
+                            Strategy
+                        </h2>
+                        <ul>
+                            <li>
+                                Initial <strong class="text-primary">60</strong> mins - Max wallet limit is <strong
+                                    class="text-primary">586M</strong> tokens
+                            </li>
+                            <li>
+                                After <strong class="text-primary">60</strong> mins - Max wallet limit will be removed
+                            </li>
+                            <li>
+                                After <strong class="text-primary">60</strong> mins - Renounced Ownership
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-5">
+                        <div class="row row-cols-sm-2 row-cols-1 gy-4">
+                            <div class="col">
+                                <div class="card card-hover border-0 shadow position-relative">
+                                    <div class="card-body mx-3 mt-5 pt-0 text-center">
+                                        <span>Buy Tax</span>
+                                        <h3 class="mt-2 mb-4">$0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-hover border-0 shadow position-relative">
+                                    <div class="card-body mx-3 mt-5 pt-0 text-center">
+                                        <span>Sell Tax</span>
+                                        <h3 class="mt-2 mb-4">$0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card card-hover border-0 shadow position-relative">
+                                    <div class="card-body mx-3 mt-5 pt-0 text-center">
+                                        <span>Total Supply</span>
+                                        <h3 class="mt-2 mb-4">$69B</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Joruney -->
+        <section class="container">
+            <div class="text-center pb-4 pb-md-0 mb-2 mb-md-5 mx-auto" style="max-width: 530px;">
+                <h2 class="h1">My Joruney</h2>
+                <p class="mb-0">
+                    Embark on my journey from rookie trader to inspired adventurer - May 2023
+                </p>
+            </div>
+
+            <div class="steps steps-sm steps-horizontal-md steps-center pb-5 mb-md-2 mb-lg-3">
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            4<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Attention</h3>
+                        <p class="mb-0">
+                            Pepe breakout catches my attention
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            5<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Promising start</h3>
+                        <p class="mb-0">
+                            100 Euros turn into 700 Euros
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            8<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Experience</h3>
+                        <p class="mb-0">
+                            Lost 1500 Euros in Dino, Pooh, Floki, AI Doge, Minionseth
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            9<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Rollercoaster of emotions</h3>
+                        <p class="mb-0">
+                            Victimized by a rug pull, but earned 8000 Euros
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            10<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Learning something new</h3>
+                        <p class="mb-0">
+                            Seeking solace on Twitter, hoping to learn something new
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            11<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Curiosity</h3>
+                        <p class="mb-0">
+                            Turbo & Chat GPT adventures spark curiosity
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="steps steps-sm steps-horizontal-md steps-center pb-5 mb-md-2 mb-lg-3">
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            12<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Insights</h3>
+                        <p class="mb-0">
+                            Delving into YouTube and Twitter for valuable insights
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            13<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Building</h3>
+                        <p class="mb-0">
+                            Embarking on my journey, building my own site
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            14<sup>th</sup>
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Testing</h3>
+                        <p class="mb-0">
+                            Testing and experimenting with Sparko contract
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            .
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Community</h3>
+                        <p class="mb-0">
+                            Motivate & Align with community
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <div class="step-number-inner">
+                            .
+                        </div>
+                    </div>
+                    <div class="step-body">
+                        <h3 class="h4 mb-3">Launch</h3>
+                        <p class="mb-0">
+                            A grand launching date awaits
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs -->
+        <section class="container pb-5 pt-md-2 pt-lg-4 pt-xl-5">
+            <h2 class="h1 mb-5">How to buy</h2>
+            <div class="row pb-md-2 pb-lg-4 pb-xl-5 mb-xxl-2">
+                <div class="col-lg-8 col-md-9">
+                    <div class="table-responsive border-top mb-0">
+                        <table class="table align-middle">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="ps-0 h5">
+                                        Step 1
+                                    </th>
+                                    <td class="pe-0">
+                                        <span class="d-inline-block my-4 py-1">
+                                            Download and set up a compatible wallet, such as MetaMask or Trust Wallet.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="ps-0 h5">
+                                        Step 2
+                                    </th>
+                                    <td class="pe-0">
+                                        <span class="d-inline-block my-4 py-1">
+                                            Purchase Ethereum (ETH) on a cryptocurrency exchange and transfer it to your
+                                            wallet.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="ps-0 h5">
+                                        Step 3
+                                    </th>
+                                    <td class="pe-0">
+                                        <span class="d-inline-block my-4 py-1">
+                                            Visit a decentralized exchange like Uniswap and connect your wallet.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="ps-0 h5">
+                                        Step 4
+                                    </th>
+                                    <td class="pe-0">
+                                        <span class="d-inline-block my-4 py-1">
+                                            Select Sparko as the desired token and enter the amount you would
+                                            like to buy. The official token address to import is to be updated.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="ps-0 h5">
+                                        Step 5
+                                    </th>
+                                    <td class="pe-0">
+                                        <span class="d-inline-block my-4 py-1">
+                                            Review the transaction details, and confirm the swap.
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5 bg-secondary">
+            <div class="container my-xl-5 my-lg-4 pb-2 py-sm-3 py-md-4">
+                <h2 class="h1 mb-lg-5 mb-4 pb-lg-0 pb-md-2 text-center">Roadmap</h2>
+
+                <!-- Swiper slider -->
+                <div class="swiper mb-xl-3 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                    data-swiper-options="{
+                  &quot;spaceBetween&quot;: 24,
+                  &quot;breakpoints&quot;: {
+                    &quot;0&quot;: {
+                      &quot;slidesPerView&quot;: 1
+                    },
+                    &quot;500&quot;: {
+                      &quot;slidesPerView&quot;: 2
+                    },
+                    &quot;768&quot;: {
+                      &quot;slidesPerView&quot;: 3
+                    },
+                    &quot;1200&quot;: {
+                      &quot;slidesPerView&quot;: 4
+                    }
+                  },
+                  &quot;pagination&quot;: {
+                    &quot;el&quot;: &quot;.swiper-pagination&quot;,
+                    &quot;clickable&quot;: true
+                  }
+                }">
+                    <div class="swiper-wrapper" id="swiper-wrapper-448adec6f204ed48" aria-live="polite"
+                        style="transform: translate3d(0px, 0px, 0px);">
+
+                        <div class="swiper-slide h-auto swiper-slide-active" role="group" aria-label="1 / 4"
+                            style="width: 323.5px; margin-right: 24px;">
+                            <div class="card h-100">
+                                <div class="card-body my-md-5 my-4 py-xl-2 py-md-0 py-sm-2 text-center">
+                                    <h3 class="h5 mb-3">Phase 1</h3>
+                                    <ul class="list-unstyled mb-0">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto swiper-slide-next" role="group" aria-label="2 / 4"
+                            style="width: 323.5px; margin-right: 24px;">
+                            <div class="card h-100">
+                                <div class="card-body my-md-5 my-4 py-xl-2 py-md-0 py-sm-2 text-center">
+                                    <h3 class="h5 mb-3">Phase 2</h3>
+                                    <ul class="list-unstyled mb-0">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto" role="group" aria-label="3 / 4"
+                            style="width: 323.5px; margin-right: 24px;">
+                            <div class="card h-100">
+                                <div class="card-body my-md-5 my-4 py-xl-2 py-md-0 py-sm-2 text-center">
+                                    <h3 class="h5 mb-3">Phase 3</h3>
+                                    <ul class="list-unstyled mb-0">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto" role="group" aria-label="4 / 4"
+                            style="width: 323.5px; margin-right: 24px;">
+                            <div class="card h-100">
+                                <div class="card-body my-md-5 my-4 py-xl-2 py-md-0 py-sm-2 text-center">
+                                    <h3 class="h5 mb-3">Phase 4</h3>
+                                    <ul class="list-unstyled mb-0">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swiper pagination -->
+                    <div
+                        class="swiper-pagination position-static mt-4 pt-lg-3 pt-2 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                            role="button" aria-label="Go to slide 1" aria-current="true"></span><span
+                            class="swiper-pagination-bullet" tabindex="0" role="button"
+                            aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0"
+                            role="button" aria-label="Go to slide 3"></span>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="dont-miss">
+            <div class="position-absolute w-100 h-100 bg-dark opacity-50"></div>
+            <div class="d-flex position-relative justify-content-center align-items-center h-100" style="z-index: 99">
+                <div class="w-100 top-0 text-center px-3">
+                    <h3 class="display-5 mb-4 pb-2 text-white">
+                        Don't miss anything with <span class="text-primary">Sparko</span>
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+        <div class="container pt-lg-4">
+            <div class="row gy-5 pb-5">
+                <div class="col-lg-4">
+                    <h3 class="mb-4 pb-lg-2 text-white">Join our community</h3>
+                    <div class="mt-n3 ms-n3">
+                        <a class="btn btn-icon btn-secondary btn-twitter rounded-circle mt-3 ms-3">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="d-flex flex-lg-row flex-column justify-content-lg-between mt-n4 mx-n2">
+                        <div class="mt-4 px-2">
+                            <h3 class="mb-4 pb-lg-2">Reach out</h3>
+                            <ul class="nav flex-column mb-0">
+                                <!-- <li class="mb-1">
+                                    <a class="nav-link align-items-start fw-normal px-0 py-1">
+                                        <i class="bx bx-map fs-5 text-primary me-2"></i>
+                                        ----
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a class="nav-link align-items-start fw-normal px-0 py-1">
+                                        <i class="bx bx-phone-call fs-5 text-primary me-2"></i>
+                                        ----
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a class="nav-link align-items-start fw-normal px-0 py-1">
+                                        <i class="bx bx-envelope fs-5 text-primary me-2"></i>
+                                        sparko@sparko.live
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+</body>
+
+</html>
