@@ -18998,4 +18998,11 @@ img-comparison-slider:focus {
     height: 700px;
 }
 
+.sparko-ecosystem {
+    background-image: url("../img/sparko/Sparko\ Ecosystem.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 /*# sourceMappingURL=theme.min.css.map */
